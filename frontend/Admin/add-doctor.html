@@ -65,7 +65,7 @@
       </header>
 
       <div class="content-section" style="max-width: 900px;">
-        <form action="doctors.html" method="POST">
+        <form id="add-doctor-form">
           <!-- Row 1: Names -->
           <div class="form-grid-2">
             <div class="form-group">
@@ -81,7 +81,7 @@
           <!-- Specialization -->
           <div class="form-group">
             <label for="specialization">Specialization</label>
-            <select id="specialization" name="specialization" style="width: 100%; padding: 16px; background-color: var(--input-bg); border: 1px solid transparent; border-radius: var(--input-border-radius); font-size: 16px; appearance: none; cursor: pointer;">
+            <select id="specialization" name="specialization" class="form-select">
               <option value="">Select specialization</option>
               <option value="endocrinology">Endocrinology</option>
               <option value="cardiology">Cardiology</option>
@@ -123,5 +123,7 @@
       </div>
     </main>
   </div>
+
+  <script src="../Js/form-handler.js"></script>
 </body>
 </html>

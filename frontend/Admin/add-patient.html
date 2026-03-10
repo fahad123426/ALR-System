@@ -75,19 +75,13 @@
           <h2 class="section-title">Patient Information</h2>
         </div>
         
-        <form action="#" method="POST">
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
-            <div class="form-group">
-              <label for="p-name">Full Name</label>
-              <input type="text" id="p-name" name="name" placeholder="e.g. John Doe" required>
-            </div>
-            <div class="form-group">
-              <label for="p-email">Email Address</label>
-              <input type="email" id="p-email" name="email" placeholder="john@example.com" required>
-            </div>
+        <form id="add-patient-form">
+          <div class="form-grid-2">
+              <input type="text" id="p-name" name="name" placeholder="e.g. Abdullah Khan" required>
+              <input type="email" id="p-email" name="email" placeholder="abdullah.k@example.pk" required>
           </div>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+          <div class="form-grid-2">
             <div class="form-group">
               <label for="p-phone">Phone Number</label>
               <input type="tel" id="p-phone" name="phone" placeholder="+1 (555) 000-0000">
@@ -111,5 +105,7 @@
       </div>
     </main>
   </div>
+
+  <script src="../Js/form-handler.js"></script>
 </body>
 </html>

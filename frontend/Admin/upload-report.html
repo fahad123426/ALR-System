@@ -75,7 +75,7 @@
           <h2 class="section-title">Report Details</h2>
         </div>
         
-        <form action="../Patient/analysis.html" method="GET" enctype="multipart/form-data">
+        <form id="upload-form">
           <div class="form-group">
             <label for="p-select">Select Patient</label>
             <input type="text" id="p-select" name="patient_search" list="patient-list" placeholder="Search by name or email..." required style="width: 100%; padding: 16px; background-color: var(--input-bg); border: 1px solid transparent; border-radius: var(--input-border-radius); font-size: 16px;">
@@ -89,13 +89,13 @@
 
           <div class="form-group">
             <label for="file-upload">Upload Lab Report (PDF/Image)</label>
-            <div style="border: 2px dashed #769382; border-radius: 12px; padding: 40px; text-align: center; background-color: rgba(118, 147, 130, 0.05); transition: var(--transition);">
+            <div class="dropzone-area">
               <svg xmlns="http://www.w3.org/2000/svg" style="width: 48px; height: 48px; color: #769382; margin-bottom: 16px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
               </svg>
               <p style="margin-bottom: 12px; font-weight: 600;">Drag and drop file here</p>
               <p style="font-size: 14px; color: #666; margin-bottom: 24px;">or click to browse your computer</p>
-              <input type="file" id="file-upload" name="report" style="display: none;" onchange="this.form.submit()">
+              <input type="file" id="file-upload" name="report" style="display: none;">
               <button type="button" class="submit-btn" style="width: auto; padding: 12px 24px;" onclick="document.getElementById('file-upload').click()">Select File</button>
             </div>
           </div>
@@ -105,5 +105,7 @@
       </div>
     </main>
   </div>
+
+  <script src="../Js/form-handler.js"></script>
 </body>
 </html>
