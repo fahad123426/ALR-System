@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LabAI - Upload Report</title>
+  <link rel="stylesheet" href="../Css/style.css">
+  <link rel="stylesheet" href="../Css/dashboard.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard-wrapper">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2 class="brand-name-sidebar">LabAI</h2>
+        <p style="font-size: 12px; color: rgba(255,255,255,0.6);">Laboratory reports automation</p>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="admin-dashboard.html" class="nav-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+          </svg>
+          Dashboard
+        </a>
+        <a href="patients.html" class="nav-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          Patients
+        </a>
+        <a href="doctors.html" class="nav-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+          </svg>
+          Show All Doctors
+        </a>
+        <a href="upload-report.html" class="nav-item active">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+          </svg>
+          Upload Report
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="admin-login.html" class="nav-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+          </svg>
+          Logout
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="top-bar">
+        <div class="top-bar-left">
+          <h1>Upload Report</h1>
+        </div>
+        <div class="top-bar-right">
+          <div class="admin-info">
+            <span style="font-weight: 500; font-size: 15px;">Admin Fahad</span>
+            <div class="admin-avatar">AF</div>
+          </div>
+        </div>
+      </header>
+
+      <div class="content-section" style="max-width: 800px;">
+        <div class="section-header">
+          <h2 class="section-title">Report Details</h2>
+        </div>
+        
+        <form id="upload-form">
+          <div class="form-group">
+            <label for="p-select">Select Patient</label>
+            <input type="text" id="p-select" name="patient_search" list="patient-list" placeholder="Search by name or email..." required style="width: 100%; padding: 16px; background-color: var(--input-bg); border: 1px solid transparent; border-radius: var(--input-border-radius); font-size: 16px;">
+            <datalist id="patient-list">
+              <option value="Ayesha Khan (ID: #LB-0042)"></option>
+              <option value="Muhammad Bilal (ID: #LB-0045)"></option>
+              <option value="Zainab Malik (ID: #LB-0048)"></option>
+              <option value="Omar Farooq (ID: #LB-0050)"></option>
+            </datalist>
+          </div>
+
+          <div class="form-group">
+            <label for="file-upload">Upload Lab Report (PDF/Image)</label>
+            <div class="dropzone-area">
+              <svg xmlns="http://www.w3.org/2000/svg" style="width: 48px; height: 48px; color: #769382; margin-bottom: 16px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+              </svg>
+              <p style="margin-bottom: 12px; font-weight: 600;">Drag and drop file here</p>
+              <p style="font-size: 14px; color: #666; margin-bottom: 24px;">or click to browse your computer</p>
+              <input type="file" id="file-upload" name="report" style="display: none;">
+              <button type="button" class="submit-btn" style="width: auto; padding: 12px 24px;" onclick="document.getElementById('file-upload').click()">Select File</button>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn" style="margin-top: 16px;">Initiate AI Analysis</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="../Js/form-handler.js"></script>
+</body>
+</html>
